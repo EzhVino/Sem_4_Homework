@@ -27,3 +27,23 @@ int b = Convert.ToInt32(Console.ReadLine());
 Deg(a, b);
 
 // * Все еще не понимаю, где же использовать void  а где с типом данных. И то и то работает
+
+
+// Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+
+int SumOfDigits(int num)
+{
+    int sum = 0;
+    while (num % 10 > 0)
+    {
+        int currentdigit = num % 10;
+        sum += currentdigit;
+        num /= 10;
+    }
+    return sum;
+}
+
+Console.WriteLine("Input number: ");
+int number = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("-> " + SumOfDigits(number));
+
