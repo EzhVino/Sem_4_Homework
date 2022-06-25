@@ -64,10 +64,13 @@ void ShowArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        Console.Write(array[i] + " ");
+        Console.Write(array[i] + ", ");
     }
 }
 
-int[] myArray = Arrayof8 (0, 100);
+Console.WriteLine("Задайте диапазон чисел в массиве от минимального:");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("до максимального:");
+int max = Convert.ToInt32(Console.ReadLine());
+int[] myArray = Arrayof8 (min, max);
 ShowArray(myArray);
-Console.WriteLine();
