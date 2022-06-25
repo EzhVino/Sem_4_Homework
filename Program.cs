@@ -47,3 +47,27 @@ Console.WriteLine("Input number: ");
 int number = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("-> " + SumOfDigits(number));
 
+
+//Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+
+int[] Arrayof8 (int min, int max)
+{
+    int[] array = new int[8];
+    for (int i = 0; i < 8; i++)
+    {
+        array[i] = new Random().Next(min, max + 1);
+    }
+    return array;
+}
+
+void ShowArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+}
+
+int[] myArray = Arrayof8 (0, 100);
+ShowArray(myArray);
+Console.WriteLine();
